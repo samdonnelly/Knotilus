@@ -50,8 +50,9 @@ set(STM32CUBEMX_INCLUDE_DIRECTORIES
 
 # STM32F4 project code 
 set(STM32F4_PROJECT_INCLUDE_DIRECTORIES 
-    ${CMAKE_CURRENT_SOURCE_DIR}/hardware
+    ${CMAKE_CURRENT_SOURCE_DIR}/config
     ${CMAKE_CURRENT_SOURCE_DIR}/core
+    ${CMAKE_CURRENT_SOURCE_DIR}/hal
     ${CMAKE_CURRENT_SOURCE_DIR}/includes
     ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/headers/core
     ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/headers/devices
@@ -108,10 +109,12 @@ file(GLOB_RECURSE STM32CUBEMX_SOURCES CONFIGURE_DEPENDS
 
 # STM32F4 project code 
 file(GLOB_RECURSE STM32F4_PROJECT_SOURCES CONFIGURE_DEPENDS
-    ${CMAKE_CURRENT_SOURCE_DIR}/hardware/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/hardware/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/config/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/config/*.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/core/*.c
     ${CMAKE_CURRENT_SOURCE_DIR}/core/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/hal/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/hal/*.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/sources/devices/*.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/sources/devices/*.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/sources/other/*.c
