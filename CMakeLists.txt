@@ -40,13 +40,13 @@ set(CMAKE_CXX_EXTENSIONS ON)
 
 # STM generated code 
 set(STM32CUBEMX_INCLUDE_DIRECTORIES
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/FATFS/Target
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/FATFS/App
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/CMSIS/Device/ST/STM32F4xx/Include
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/CMSIS/Include
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Inc
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy)
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/Target
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/App
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/CMSIS/Include
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Inc
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy)
 
 # STM32F4 project code 
 set(STM32F4_PROJECT_INCLUDE_DIRECTORIES 
@@ -54,17 +54,17 @@ set(STM32F4_PROJECT_INCLUDE_DIRECTORIES
     ${CMAKE_CURRENT_SOURCE_DIR}/core
     ${CMAKE_CURRENT_SOURCE_DIR}/hal
     ${CMAKE_CURRENT_SOURCE_DIR}/includes
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/headers/core
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/headers/devices
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/headers/other
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/headers/peripherals
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/tools)
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/headers/core
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/headers/devices
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/headers/other
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/headers/peripherals
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/tools)
 
 # Autopilot project code 
 set(AUTOPILOT_PROJECT_INCLUDE_DIRECTORIES
-    ${CMAKE_CURRENT_SOURCE_DIR}/../autonomous-navigation/TerraPilot/boat
-    ${CMAKE_CURRENT_SOURCE_DIR}/../autonomous-navigation/TerraPilot/system
-    ${CMAKE_CURRENT_SOURCE_DIR}/../autonomous-navigation/TerraPilot/vehicle)
+    ${CMAKE_CURRENT_SOURCE_DIR}/../TerraPilot/boat
+    ${CMAKE_CURRENT_SOURCE_DIR}/../TerraPilot/system
+    ${CMAKE_CURRENT_SOURCE_DIR}/../TerraPilot/vehicle)
 
 # External library code 
 set(LIBRARY_INCLUDE_DIRECTORIES 
@@ -84,28 +84,28 @@ set(LIBRARY_INCLUDE_DIRECTORIES
 
 # STM generated code 
 file(GLOB_RECURSE STM32CUBEMX_SOURCES CONFIGURE_DEPENDS
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/FATFS/Target/user_diskio.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/FATFS/App/fatfs.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/diskio.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/ff.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/option/syscall.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c)
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/Target/user_diskio.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/App/fatfs.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/diskio.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/ff.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/option/syscall.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c)
 
 # STM32F4 project code 
 file(GLOB_RECURSE STM32F4_PROJECT_SOURCES CONFIGURE_DEPENDS
@@ -115,23 +115,23 @@ file(GLOB_RECURSE STM32F4_PROJECT_SOURCES CONFIGURE_DEPENDS
     ${CMAKE_CURRENT_SOURCE_DIR}/core/*.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/hal/*.c
     ${CMAKE_CURRENT_SOURCE_DIR}/hal/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/sources/devices/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/sources/devices/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/sources/other/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/sources/other/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/sources/peripherals/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/stm32f4/sources/peripherals/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/tools/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../STM32F4-driver-library/tools/*.cpp)
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/devices/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/devices/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/other/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/other/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/peripherals/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/peripherals/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/tools/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/tools/*.cpp)
 
 # Autopilot project code 
 file(GLOB_RECURSE AUTOPILOT_PROJECT_SOURCES CONFIGURE_DEPENDS
-    ${CMAKE_CURRENT_SOURCE_DIR}/../autonomous-navigation/TerraPilot/boat/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../autonomous-navigation/TerraPilot/boat/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../autonomous-navigation/TerraPilot/system/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../autonomous-navigation/TerraPilot/system/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../autonomous-navigation/TerraPilot/vehicle/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../autonomous-navigation/TerraPilot/vehicle/*.cpp)
+    ${CMAKE_CURRENT_SOURCE_DIR}/../TerraPilot/boat/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../TerraPilot/boat/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../TerraPilot/system/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../TerraPilot/system/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../TerraPilot/vehicle/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../TerraPilot/vehicle/*.cpp)
 
 # External library code 
 file(GLOB_RECURSE LIBRARY_PROJECT_SOURCES CONFIGURE_DEPENDS
