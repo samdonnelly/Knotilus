@@ -17,7 +17,6 @@
 
 // Library 
 #include "stm32f4xx_hal.h" 
-#include "fatfs.h" 
 #include "tools.h" 
 
 // Application 
@@ -88,7 +87,6 @@ int main(void)
 
     // Initialize all configured peripherals 
     MX_GPIO_Init();
-    MX_FATFS_Init();
 
     // Main loop 
     while (1)

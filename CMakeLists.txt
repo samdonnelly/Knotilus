@@ -40,8 +40,8 @@ set(CMAKE_CXX_EXTENSIONS ON)
 
 # STM generated code 
 set(STM32CUBEMX_INCLUDE_DIRECTORIES
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/Target
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/App
+    # ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/Target
+    # ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/App
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/CMSIS/Device/ST/STM32F4xx/Include
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/CMSIS/Include
@@ -54,10 +54,16 @@ set(STM32F4_PROJECT_INCLUDE_DIRECTORIES
     ${CMAKE_CURRENT_SOURCE_DIR}/core
     ${CMAKE_CURRENT_SOURCE_DIR}/hal
     ${CMAKE_CURRENT_SOURCE_DIR}/includes
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/headers/core
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/headers/devices
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/headers/other
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/headers/peripherals
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/fatfs
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/core
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/devices/actuators
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/devices/displays
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/devices/gnss
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/devices/imu
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/devices/memory
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/devices/wireless
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/other
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/peripherals
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/tools)
 
 # Autopilot project code 

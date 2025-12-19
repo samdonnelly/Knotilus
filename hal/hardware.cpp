@@ -486,7 +486,7 @@ void VehicleHardware::HardwareSetup(void)
     // Memory 
 
     // SD card driver init 
-    fatfs_user_init(hardware.spi, hardware.gpio_sd, static_cast<uint16_t>(SET_BIT << hardware.sd_ss_pin));
+    sd_user_init(hardware.spi, hardware.gpio_sd, hardware.timer_generic, static_cast<uint16_t>(SET_BIT << hardware.sd_ss_pin));
 
     //==================================================
 
@@ -837,7 +837,7 @@ VehicleHardware::MemoryStatus VehicleHardware::MemorySetup(void)
     //==================================================
     // Mount the drive (required before it can be accessed). 
 
-    hardware.fresult = f_mount(&hardware.file_sys, "", FATFS_MOUNT_NOW);
+    hardware.fresult = f_mount(&hardware.file_sys, "", SD_MOUNT_NOW);
 
     if (hardware.fresult != FR_OK)
     {
@@ -976,7 +976,7 @@ VehicleHardware::MemoryStatus VehicleHardware::MemoryOpenFile(void)
         // Attempt to open the file with read and write permissions. The access mode used will 
         // open the file if it exists, or create and open a new file if it does not exist. The 
         // file opens with the position set to the start of the file. 
-        hardware.fresult = f_open(&hardware.file, hardware.path, FATFS_MODE_OAWR);
+        hardware.fresult = f_open(&hardware.file, hardware.path, SD_MODE_OAWR);
     
         if (hardware.fresult != FR_OK)
         {

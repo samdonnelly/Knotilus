@@ -26,7 +26,7 @@ extern "C" {
 #include "esc_driver.h"
 #include "hc05_driver.h"
 #include "hd44780u_driver.h"
-#include "fatfs_driver.h"
+#include "sd_driver.h"
 #include "lsm303agr_driver.h"
 #include "m8q_driver.h"
 #include "mpu6050_driver.h"
@@ -52,7 +52,7 @@ extern "C" {
 #include "tools.h"
 
 // STM drivers 
-#include "fatfs.h"
+#include "ff.h"
 
 //=======================================================================================
 
