@@ -40,9 +40,6 @@ set(CMAKE_CXX_EXTENSIONS ON)
 
 # STM generated code 
 set(STM32CUBEMX_INCLUDE_DIRECTORIES
-    # ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/Target
-    # ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/App
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/CMSIS/Device/ST/STM32F4xx/Include
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/CMSIS/Include
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Inc
@@ -90,13 +87,6 @@ set(LIBRARY_INCLUDE_DIRECTORIES
 
 # STM generated code 
 file(GLOB_RECURSE STM32CUBEMX_SOURCES CONFIGURE_DEPENDS
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/Target/user_diskio.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/FATFS/App/fatfs.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/diskio.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/ff.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/option/syscall.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/stmcode/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
@@ -121,12 +111,13 @@ file(GLOB_RECURSE STM32F4_PROJECT_SOURCES CONFIGURE_DEPENDS
     ${CMAKE_CURRENT_SOURCE_DIR}/core/*.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/hal/*.c
     ${CMAKE_CURRENT_SOURCE_DIR}/hal/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/devices/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/devices/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/other/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/other/*.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/peripherals/*.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/sources/peripherals/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/fatfs/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/devices/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/devices/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/other/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/other/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/peripherals/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/stm32f4/peripherals/*.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/tools/*.c
     ${CMAKE_CURRENT_SOURCE_DIR}/../embedded-driver-library/tools/*.cpp)
 
